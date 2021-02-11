@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// post desc image and name for player
+// post desc image and name for player heje
 
 router.post('/playerData', upload.single('image'), (req, res) => {
   const playerDesc = new playerTemplateCopy({
