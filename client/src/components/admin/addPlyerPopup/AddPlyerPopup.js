@@ -7,7 +7,7 @@ import axios from 'axios';
 
 export const AddPlyerPopup = (props) => {
   const { register, handleSubmit } = useForm();
-  const { setShowModal } = props;
+  const { setShowModal, setUpdatedPlayerList } = props;
 
   const onSubmit = (playerData, e) => {
     const playerName = playerData.name;
@@ -19,9 +19,10 @@ export const AddPlyerPopup = (props) => {
     singlePlayer.append('name', playerName);
 
     axios
-      .post('http://localhost:4000/app/playerData', singlePlayer)
+      .post('http://localhost:4000/playerData', singlePlayer)
       .then((res) => {
         console.log(res.data);
+        setUpdatedPlayerList(res.data);
         e.target.reset();
       })
       .catch((error) => {

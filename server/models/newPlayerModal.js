@@ -7,5 +7,3 @@ const playerTemplate = new mongoose.Schema({
 });
 
 module.exports = new mongoose.model('image', playerTemplate);
-
-// image med multer

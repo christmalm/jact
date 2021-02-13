@@ -16,7 +16,7 @@ const upload = multer({ storage: storage });
 
 // post desc image and name for player heje
 
-router.post('/playerData', upload.single('image'), (req, res) => {
+router.post('/', upload.single('image'), (req, res) => {
   const playerDesc = new playerTemplateCopy({
     name: req.body.name,
     desc: req.body.description,
@@ -31,9 +31,5 @@ router.post('/playerData', upload.single('image'), (req, res) => {
       res.json(error);
     });
 });
-
-// Get player list thats been posted
-
-router.get('/playerList', (req, res) => {});
 
 module.exports = router;
