@@ -21,7 +21,6 @@ export const AddPlyerPopup = (props) => {
     axios
       .post('http://localhost:4000/playerData', singlePlayer)
       .then((res) => {
-        console.log(res.data);
         setUpdatedPlayerList(res.data);
         e.target.reset();
       })

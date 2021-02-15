@@ -29,6 +29,7 @@ export const Admin = () => {
       <div>all players from BE</div>
       <PlayerList
         updatedPlayerList={updatedPlayerList}
+        setUpdatedPlayerList={setUpdatedPlayerList}
         setplayersArr={setplayersArr}
         playersArr={playersArr}
       />

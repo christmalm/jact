@@ -4,13 +4,17 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const postPlayerDecs = require('./routes/player');
 const getPlayer = require('./routes/playerList');
+const deletePlayer = require('./routes/deletePlayer');
 
 const cors = require('cors');
 
 dotenv.config();
 
-mongoose.connect(process.env.DATABASE_ACCESS, () =>
-  console.log('Db connected')
+mongoose.connect(
+  process.env.DATABASE_ACCESS,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+
+  () => console.log('Db connected')
 );
 
 app.use(express.json());
@@ -18,6 +22,7 @@ app.use(cors());
 app.use('/uploads', express.static('uploads'));
 app.use('/playerData', postPlayerDecs);
 app.use('/playerList', getPlayer);
+app.use('/deletePlayer/:id', deletePlayer);
 
 app.listen(4000, console.log('server  is running on port 4000'));
 
