@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 const postPlayerDecs = require('./routes/player');
 const getPlayer = require('./routes/playerList');
 const deletePlayer = require('./routes/deletePlayer');
+const signIn = require('./routes/login');
 
 const cors = require('cors');
 
@@ -23,6 +24,7 @@ app.use('/uploads', express.static('uploads'));
 app.use('/playerData', postPlayerDecs);
 app.use('/playerList', getPlayer);
 app.use('/deletePlayer/:id', deletePlayer);
+app.use('/signin', signIn);
 
 app.listen(4000, console.log('server  is running on port 4000'));
 

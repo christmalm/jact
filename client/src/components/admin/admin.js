@@ -8,31 +8,39 @@ export const Admin = () => {
   const [updatedPlayerList, setUpdatedPlayerList] = useState([]);
 
   return (
-    <div>
-      <div>
-        {showModal ? (
-          <button disabled>Add player</button>
-        ) : (
-          <button onClick={() => setShowModal(!showModal)}>Add player</button>
-        )}
-      </div>
+    <>
+      {localStorage.getItem('loggedIn') !== null ? (
+        <div>
+          <div>
+            {showModal ? (
+              <button disabled>Add player</button>
+            ) : (
+              <button onClick={() => setShowModal(!showModal)}>
+                Add player
+              </button>
+            )}
+          </div>
 
-      <div>
-        {showModal ? (
-          <AddPlyerPopup
+          <div>
+            {showModal ? (
+              <AddPlyerPopup
+                setUpdatedPlayerList={setUpdatedPlayerList}
+                showModal={showModal}
+                setShowModal={setShowModal}
+              />
+            ) : null}
+          </div>
+          <div>all players from BE</div>
+          <PlayerList
+            updatedPlayerList={updatedPlayerList}
             setUpdatedPlayerList={setUpdatedPlayerList}
-            showModal={showModal}
-            setShowModal={setShowModal}
+            setplayersArr={setplayersArr}
+            playersArr={playersArr}
           />
-        ) : null}
-      </div>
-      <div>all players from BE</div>
-      <PlayerList
-        updatedPlayerList={updatedPlayerList}
-        setUpdatedPlayerList={setUpdatedPlayerList}
-        setplayersArr={setplayersArr}
-        playersArr={playersArr}
-      />
-    </div>
+        </div>
+      ) : (
+        <h1>Not authorized.</h1>
+      )}
+    </>
   );
 };

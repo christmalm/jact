@@ -1,9 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-
-// addning images, desc and name to mongo success
-// next moving on to get the data
+import { API_URL } from '../../../constants/api';
 
 export const AddPlyerPopup = (props) => {
   const { register, handleSubmit } = useForm();
@@ -19,7 +17,7 @@ export const AddPlyerPopup = (props) => {
     singlePlayer.append('name', playerName);
 
     axios
-      .post('http://localhost:4000/playerData', singlePlayer)
+      .post(`${API_URL}/playerData`, singlePlayer)
       .then((res) => {
         setUpdatedPlayerList(res.data);
         e.target.reset();
