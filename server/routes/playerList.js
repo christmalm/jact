@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
   newPlayerModel
     .find({})
     .then((doc) => {
-      console.log(doc);
       res.status(200).json(doc);
     })
     .catch((err) => res.status(400).json({ Error: err }));

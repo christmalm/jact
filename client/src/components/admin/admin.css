@@ -1,0 +1,6 @@
+.adminWrapperContainer {
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(to right, #141e30, #243b55);
+  height: 100vh;
+}

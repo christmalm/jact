@@ -29,7 +29,6 @@ export const AddPlyerPopup = (props) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div onClick={() => setShowModal(false)}>X</div>
       <div>
         <label>Player Image file</label>
         <input type='file' name='image' ref={register} />
