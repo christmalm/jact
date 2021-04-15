@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { API_URL } from '../../../constants/api';
 import axios from 'axios';
+import playerList from './playerList.css';
 
 export const PlayerList = (props) => {
   const {
@@ -50,19 +51,15 @@ export const PlayerList = (props) => {
   }, [updatedPlayerList]);
 
   return (
-    <div>
+    <div className='containerPlayer'>
       {playersArr.map((player) => {
         return (
-          <div key={player._id}>
+          <div className='wrapperPlayer' key={player._id}>
             <div>
               {player.name}
               <div>{player.desc}</div>
             </div>
-            <img
-              style={{ width: '100px', height: '100px' }}
-              src={`${API_URL}/uploads/${player.img}`}
-              alt=''
-            />
+            <img src={`${API_URL}/uploads/${player.img}`} alt='' />
             <div>
               <button onClick={() => deletePlayer(player._id)}>delete</button>
             </div>

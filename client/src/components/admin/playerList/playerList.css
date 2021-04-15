@@ -1,0 +1,15 @@
+.containerPlayer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.wrapperPlayer {
+  display: flex;
+  padding: 10px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}

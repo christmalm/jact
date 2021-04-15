@@ -1,6 +1,17 @@
-.adminWrapperContainer {
+.adminContainer {
   display: flex;
-  justify-content: space-around;
   background-image: linear-gradient(to right, #141e30, #243b55);
+  background-size: cover;
   height: 100vh;
+}
+
+.addPlyerPopup {
+  border-right: 1px solid #192035;
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.wrapperPlayerList {
+  width: 70%;
 }
