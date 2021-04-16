@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { API_URL } from '../../../constants/api';
+import addPlyerPopup from './addplyerPopup.css';
 
 export const AddPlyerPopup = (props) => {
   const { register, handleSubmit } = useForm();
@@ -28,18 +29,39 @@ export const AddPlyerPopup = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <label>Player Image file</label>
-        <input type='file' name='image' ref={register} />
+    <form className='formContainer' onSubmit={handleSubmit(onSubmit)}>
+      <div className='title'>Add player</div>
+      <div className='wrapperForm'>
+        <div className='wrapperImageFile'>
+          <div className='imageFile'>
+            <label>Player Image file</label>
+          </div>
+          <input type='file' name='image' ref={register} />
+        </div>
+        <div className='wrapperPlayerName'>
+          <div className='playerName'>
+            <label>Player name</label>
+          </div>
+          <input autocomplete='off' type='text' name='name' ref={register} />
+        </div>
+        <div className='wrapperDescription'>
+          <div className='desc'>
+            <label>Description</label>
+          </div>
+          <textarea
+            name='description'
+            cols='40'
+            rows='5'
+            ref={register}
+          ></textarea>
+        </div>
+        <div className='wrapperBtnAdd'>
+          <button className='btnAdd' type='submit'>
+            Add player
+            <i class='fas fa-user-plus'></i>
+          </button>
+        </div>
       </div>
-      <div>
-        <label>Player name</label>
-        <input type='text' name='name' ref={register} />
-      </div>
-      <label>Description</label>
-      <textarea name='description' cols='40' rows='5' ref={register}></textarea>
-      <button type='submit'>Add player</button>
     </form>
   );
 };

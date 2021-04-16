@@ -55,13 +55,21 @@ export const PlayerList = (props) => {
       {playersArr.map((player) => {
         return (
           <div className='wrapperPlayer' key={player._id}>
-            <div>
-              {player.name}
-              <div>{player.desc}</div>
+            <div className='wrapperImg'>
+              <img src={`${API_URL}/uploads/${player.img}`} alt='' />
             </div>
-            <img src={`${API_URL}/uploads/${player.img}`} alt='' />
-            <div>
-              <button onClick={() => deletePlayer(player._id)}>delete</button>
+            <div className='wrapperDesc'>
+              <div className='name'>{player.name}</div>
+              <div className='desc'>{player.desc}</div>
+            </div>
+            <div className='wrapperBtnDelete'>
+              <button
+                className='btnDelete'
+                onClick={() => deletePlayer(player._id)}
+              >
+                Delete
+                <i class='fas fa-trash-alt'></i>
+              </button>
             </div>
           </div>
         );
