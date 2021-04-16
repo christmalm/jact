@@ -56,7 +56,11 @@ export const PlayerList = (props) => {
         return (
           <div className='wrapperPlayer' key={player._id}>
             <div className='wrapperImg'>
-              <img src={`${API_URL}/uploads/${player.img}`} alt='' />
+              <img
+                className='playerImg'
+                src={`${API_URL}/uploads/${player.img}`}
+                alt=''
+              />
             </div>
             <div className='wrapperDesc'>
               <div className='name'>{player.name}</div>

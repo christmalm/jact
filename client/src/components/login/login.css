@@ -22,19 +22,21 @@
 }
 .username {
   padding-bottom: 5px;
+  font-family: 'Mukta';
 }
 .password {
   padding-bottom: 5px;
+  font-family: 'Mukta';
 }
 .wrapperInput {
   padding-bottom: 25px;
 }
 .btnLogin {
-  width: 70px;
+  width: 60px;
   color: #ffffff;
-  background: #d6a05d;
-  font-weight: bold;
-  border-radius: 1px;
+  background: #bfaa91;
+  font-family: 'Mukta';
+  border-radius: 2px;
   border: none;
   cursor: pointer;
 }

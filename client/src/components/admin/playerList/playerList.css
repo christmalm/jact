@@ -17,7 +17,7 @@
   justify-content: center;
 }
 
-img {
+.playerImg {
   width: 250px;
   height: 240px;
   border-radius: 2px;

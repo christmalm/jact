@@ -1,0 +1,20 @@
+.wrapperHomeContainer {
+  background-image: radial-gradient(#444444, #232322, #131312);
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.wrapperLogoContainer {
+  display: flex;
+  align-items: center;
+}
+.LogoContainer {
+  width: 30vh;
+  display: flex;
+  justify-content: center;
+  background-image: url('../../assets/JACT_white.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 16vh;
+}
