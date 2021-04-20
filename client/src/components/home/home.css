@@ -60,6 +60,10 @@
     cursor: pointer;
     letter-spacing: 3px;
   }
+  a {
+    color: white;
+    text-decoration: none;
+  }
   .hamburgerIcon {
     cursor: pointer;
     padding-top: 50px;
@@ -127,6 +131,10 @@
   .desktopRoutesAbout:hover,
   .desktopRoutes:hover {
     color: #006c87;
+  }
+  a {
+    color: white;
+    text-decoration: none;
   }
 }
 

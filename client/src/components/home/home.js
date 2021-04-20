@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import home from './home.css';
 
 export const Home = () => {
@@ -13,13 +14,16 @@ export const Home = () => {
         {menyActive ? (
           <div className='wrapperDropdown'>
             <ul className='wrapperHamburgerRoutes'>
-              <li className='hamburgerRoutes'>Home</li>
-              <li className='hamburgerRoutes'>Players</li>
-              <li className='hamburgerRoutes'>About</li>
+              <li className='hamburgerRoutes'>
+                <Link to='/'>Home</Link>
+              </li>
+              <li className='hamburgerRoutes'>
+                <Link to='/players'>Players</Link>
+              </li>
+              <li className='hamburgerRoutes'>
+                <Link to='/about'>about</Link>
+              </li>
             </ul>
-            {/* <div className='iconActive'>
-              <i class='fas fa-volleyball-ball'></i>{' '}
-            </div> */}
           </div>
         ) : (
           <div className='hamburgerIcon'>
@@ -34,9 +38,15 @@ export const Home = () => {
         </div>
         <div className='nav'>
           <ul className='wrapperDesktopRoutes'>
-            <li className='desktopRoutes'>home</li>
-            <li className='desktopRoutes'>players</li>
-            <li className='desktopRoutes'>about</li>
+            <li className='desktopRoutes'>
+              <Link to='/'>Home</Link>
+            </li>
+            <li className='desktopRoutes'>
+              <Link to='/players'>Players</Link>
+            </li>
+            <li className='desktopRoutesAbout'>
+              <Link to='/about'>about</Link>
+            </li>
           </ul>
         </div>
       </div>
