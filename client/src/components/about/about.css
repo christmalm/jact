@@ -1,3 +1,139 @@
+/* ipad view */
+@media screen and (max-width: 770px) {
+  .header {
+    display: none;
+  }
+  .wrapperHamburger {
+    color: #fff;
+    padding: 0px 10px;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+  }
+  .wrapperDropdown {
+    font-family: 'Mukta', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    top: -300px;
+    animation: drop 0.5s ease forwards;
+    z-index: 2;
+  }
+
+  @keyframes drop {
+    0% {
+    }
+    100% {
+      transform: translateY(305px);
+    }
+  }
+  .iconActive {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+  }
+  .fa-volleyball-ball {
+    padding: 0px !important;
+    font-weight: 500 !important;
+  }
+  .wrapperHamburgerRoutes {
+    margin: -5px;
+    list-style: none;
+    padding: 15px 5px;
+    font-size: 32px;
+    background: rgb(47 46 46);
+    width: 1000px;
+    border-radius: 6px;
+    position: relative;
+    left: -50%;
+  }
+  .hamburgerRoutes {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: 3px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .hamburgerIcon {
+    cursor: pointer;
+    padding-top: 50px;
+    z-index: 2;
+  }
+}
+
+/* mobile view  */
+@media screen and (max-width: 650px) {
+  .wrapperHamburgerRoutes {
+    width: 420px;
+    font-size: 20px;
+  }
+
+  .wrapperDropdown {
+    animation: drop 0.5s ease forwards;
+  }
+  @keyframes drop {
+    0% {
+    }
+    100% {
+      transform: translateY(300px);
+    }
+  }
+}
+
+/* desktop view  */
+@media screen and (min-width: 770px) {
+  .wrapperHamburger {
+    display: none;
+  }
+  .header {
+    display: flex;
+    height: 50px;
+    padding: 50px 40px;
+  }
+  .smallLogoContainer {
+    display: flex;
+  }
+  .smallLogo {
+    width: 130px;
+    background-image: url('../../assets/jcat_logo_white.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+  }
+  .nav {
+    font-family: 'Mukta', sans-serif;
+    color: #fafafa;
+    width: 100%;
+  }
+  .wrapperDesktopRoutes {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    text-transform: uppercase;
+  }
+  .desktopRoutes {
+    margin: 0px 50px;
+    cursor: pointer;
+  }
+  .desktopRoutesAbout {
+    margin: 0px 0px 0px 50px;
+    cursor: pointer;
+  }
+  .desktopRoutesAbout:hover,
+  .desktopRoutes:hover {
+    color: #006c87;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
 /* desktop view  */
 p,
 h2,
