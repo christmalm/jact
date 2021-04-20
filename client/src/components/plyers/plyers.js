@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '../../constants/api';
-
 import players from './players.css';
 
 export const Plyers = () => {
