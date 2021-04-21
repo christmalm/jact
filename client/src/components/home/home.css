@@ -64,10 +64,16 @@
     color: white;
     text-decoration: none;
   }
-  .hamburgerIcon {
+  .activeHamburgerIcon {
     cursor: pointer;
     padding-top: 50px;
+    position: relative;
+    right: 20px;
   }
+}
+.hamburgerIcon {
+  cursor: pointer;
+  padding-top: 50px;
 }
 
 /* mobile view  */
@@ -132,7 +138,7 @@
   .desktopRoutes:hover {
     color: #006c87;
   }
-  a {
+  .homeLink {
     color: white;
     text-decoration: none;
   }
@@ -153,4 +159,30 @@
   height: 16vh;
   position: relative;
   right: -50%;
+}
+.wrapperFooter {
+  position: absolute;
+  bottom: 2%;
+  width: 100%;
+}
+.footer {
+  display: flex;
+  padding: 40px 40px 15px 40px;
+  justify-content: flex-end;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.icons:hover {
+  color: #5a4a0d;
+}
+.icons {
+  padding: 0px !important;
+  font-size: 20px;
+  color: #706161;
 }

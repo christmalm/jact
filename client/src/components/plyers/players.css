@@ -1,3 +1,146 @@
+/* ipad view */
+@media screen and (max-width: 770px) {
+  .headerPlayers {
+    display: none;
+  }
+  .wrapperHamburger {
+    color: #fff;
+    padding: 0px 10px;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+  }
+  .wrapperDropdown {
+    font-family: 'Mukta', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    top: -300px;
+    animation: drop 0.5s ease forwards;
+  }
+
+  @keyframes drop {
+    0% {
+    }
+    100% {
+      transform: translateY(305px);
+    }
+  }
+  .iconActive {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+  }
+  .fa-volleyball-ball {
+    padding: 0px !important;
+    font-weight: 500 !important;
+  }
+  .wrapperHamburgerRoutes {
+    margin: -5px;
+    list-style: none;
+    padding: 15px 5px;
+    font-size: 32px;
+    background: rgb(47 46 46);
+    width: 1000px;
+    border-radius: 6px;
+    position: relative;
+    left: -50%;
+  }
+  .hamburgerRoutes {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: 3px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .activehamburgerIconPlayer {
+    cursor: pointer;
+    padding-top: 50px;
+    color: black;
+    position: relative;
+    right: 19px;
+  }
+  .hamburgerIconPlayer {
+    cursor: pointer;
+    padding-top: 50px;
+    color: black;
+    padding-bottom: 30px;
+  }
+}
+
+/* mobile view  */
+@media screen and (max-width: 650px) {
+  .wrapperHamburgerRoutes {
+    width: 420px;
+    font-size: 20px;
+  }
+
+  .wrapperDropdown {
+    animation: drop 0.5s ease forwards;
+  }
+  @keyframes drop {
+    0% {
+    }
+    100% {
+      transform: translateY(300px);
+    }
+  }
+}
+
+/* desktop view  */
+@media screen and (min-width: 770px) {
+  .wrapperHamburger {
+    display: none;
+  }
+  .headerPlayers {
+    display: flex;
+    height: 50px;
+    padding: 50px 40px;
+    width: 100%;
+  }
+  .smallLogoContainer {
+    display: flex;
+  }
+  .smallLogoPlayerPage {
+    width: 130px;
+    background-image: url('../../assets/logo2.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+  }
+  .navPlayer {
+    font-family: 'Mukta', sans-serif;
+    color: #fafafa;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .wrapperDesktopRoutesPlayers {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  .desktopRoutesPlayers {
+    margin: 0px 50px;
+    cursor: pointer;
+  }
+  .desktopRoutesPlayersAbout {
+    margin: 0px 0px 0px 50px;
+    cursor: pointer;
+  }
+
+  .link {
+    color: black;
+    text-decoration: none;
+  }
+}
+
 .containerClients {
   display: flex;
   flex-wrap: wrap;
@@ -13,17 +156,18 @@
 }
 
 .headerClients {
-  color: #474849;
+  color: black;
   display: flex;
   justify-content: center;
-  padding: 40px 0px 40px 0px;
+  padding: 0px 0px 55px 0px;
   font-size: 30px;
   font-family: 'Mukta', sans-serif;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
-  text-shadow: 1.5px 1.5px 2px #999999;
+  text-shadow: 0.5px 0.5px 2px #3e3e3e;
 }
+
 .fa-user-edit {
   display: flex;
   align-items: center;

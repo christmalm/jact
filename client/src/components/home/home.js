@@ -18,12 +18,15 @@ export const Home = () => {
                 <Link to='/'>Home</Link>
               </li>
               <li className='hamburgerRoutes'>
-                <Link to='/players'>Players</Link>
+                <Link to='/players'>clients</Link>
               </li>
               <li className='hamburgerRoutes'>
                 <Link to='/about'>about</Link>
               </li>
             </ul>
+            <div className='activeHamburgerIcon'>
+              <i class='fas fa-volleyball-ball'></i>{' '}
+            </div>
           </div>
         ) : (
           <div className='hamburgerIcon'>
@@ -39,13 +42,19 @@ export const Home = () => {
         <div className='nav'>
           <ul className='wrapperDesktopRoutes'>
             <li className='desktopRoutes'>
-              <Link to='/'>Home</Link>
+              <Link className='homeLink' to='/'>
+                Home
+              </Link>
             </li>
             <li className='desktopRoutes'>
-              <Link to='/players'>Players</Link>
+              <Link className='homeLink' to='/players'>
+                clients
+              </Link>
             </li>
             <li className='desktopRoutesAbout'>
-              <Link to='/about'>about</Link>
+              <Link className='homeLink' to='/about'>
+                about
+              </Link>
             </li>
           </ul>
         </div>
@@ -53,6 +62,31 @@ export const Home = () => {
       {/* center Logo  */}
       <div className='logoContainer'>
         <div className='logo'></div>
+      </div>
+      <div className='wrapperFooter'>
+        <div className='footer'>
+          <div className='contact'>
+            <a href='mailto:info@jact.eu'>
+              <i class='far fa-envelope icons'></i>
+            </a>
+          </div>
+          <div className='contact'>
+            <a href='tel: +46735177331'>
+              {' '}
+              <i class='fas fa-phone icons'></i>
+            </a>
+          </div>
+          <div className='contact'>
+            <a href='https://www.instagram.com/jact.eu/?hl=sv'>
+              <i class='fab fa-instagram icons'></i>
+            </a>
+          </div>
+          <div className='contact'>
+            <a href='https://sv-se.facebook.com/jact.eu/'>
+              <i class='fab fa-facebook icons'></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

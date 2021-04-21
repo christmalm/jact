@@ -63,6 +63,8 @@
     cursor: pointer;
     padding-top: 50px;
     z-index: 2;
+    position: relative;
+    right: 20px;
   }
 }
 
@@ -128,7 +130,7 @@
   .desktopRoutes:hover {
     color: #006c87;
   }
-  a {
+  .aboutLink {
     color: white;
     text-decoration: none;
   }
@@ -153,6 +155,7 @@ h2 {
   width: 100%;
   overflow-y: auto;
   font-family: 'Mukta', sans-serif;
+  position: fixed;
 }
 /* About greg  */
 .aboutGreg {
@@ -167,6 +170,7 @@ h2 {
   align-items: center;
   display: flex;
   text-transform: uppercase;
+  font-size: 12px;
 }
 .wrapperAboutTextGreg {
   border-left: 3px solid #ffffff;
@@ -178,11 +182,11 @@ h2 {
   margin-bottom: 30px;
 }
 .text {
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 .arrowLogo {
-  padding-top: 23px;
+  padding-top: 18px;
   padding-right: 8px;
 }
 
@@ -200,6 +204,7 @@ h2 {
   align-items: center;
   float: right;
   text-transform: uppercase;
+  font-size: 12px;
 }
 .wrapperAboutTextAnders {
   border-right: 3px solid #ffffff;

@@ -20,7 +20,7 @@ export const About = () => {
                 <Link to='/'>Home</Link>
               </li>
               <li className='hamburgerRoutes'>
-                <Link to='/players'>Players</Link>
+                <Link to='/players'>clients</Link>
               </li>
               <li className='hamburgerRoutes'>
                 <Link to='/about'>about</Link>
@@ -44,13 +44,19 @@ export const About = () => {
         <div className='nav'>
           <ul className='wrapperDesktopRoutes'>
             <li className='desktopRoutes'>
-              <Link to='/'>Home</Link>
+              <Link className='aboutLink' to='/'>
+                Home
+              </Link>
             </li>
             <li className='desktopRoutes'>
-              <Link to='/players'>Players</Link>
+              <Link className='aboutLink' to='/players'>
+                clients
+              </Link>
             </li>
             <li className='desktopRoutesAbout'>
-              <Link to='/about'>about</Link>
+              <Link className='aboutLink' to='/about'>
+                about
+              </Link>
             </li>
           </ul>
         </div>
