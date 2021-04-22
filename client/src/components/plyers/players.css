@@ -71,11 +71,18 @@
 /* mobile view  */
 @media screen and (max-width: 650px) {
   .wrapperHamburgerRoutesPlayer {
-    width: 420px;
+    /* width: 420px; */
     font-size: 20px;
   }
 
-  .wrapperDropdownPlayer {
+  .hamburgerIconPlayer {
+    font-size: 25px;
+  }
+  .activehamburgerIconPlayer {
+    font-size: 25px;
+  }
+
+  /* .wrapperDropdownPlayer {
     animation: drop 0.5s ease forwards;
   }
   @keyframes drop {
@@ -84,7 +91,7 @@
     100% {
       transform: translateY(300px);
     }
-  }
+  } */
 }
 
 /* desktop view  */
