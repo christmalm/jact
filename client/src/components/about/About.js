@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import about from './about.css';
 
 export const About = () => {
@@ -14,20 +13,22 @@ export const About = () => {
         className='wrapperHamburger'
       >
         {menyActive ? (
-          <div className='wrapperDropdown'>
-            <ul className='wrapperHamburgerRoutes'>
-              <li className='hamburgerRoutes'>
-                <Link to='/'>Home</Link>
-              </li>
-              <li className='hamburgerRoutes'>
-                <Link to='/players'>clients</Link>
-              </li>
-              <li className='hamburgerRoutes'>
-                <Link to='/about'>about</Link>
-              </li>
-            </ul>
+          <div className='testAbout'>
             <div className='hamburgerIcon'>
               <i class='fas fa-volleyball-ball'></i>{' '}
+            </div>
+            <div className='wrapperDropdown'>
+              <ul className='wrapperHamburgerRoutes'>
+                <li className='hamburgerRoutes'>
+                  <Link to='/'>Home</Link>
+                </li>
+                <li className='hamburgerRoutes'>
+                  <Link to='/players'>clients</Link>
+                </li>
+                <li className='hamburgerRoutes'>
+                  <Link to='/about'>about</Link>
+                </li>
+              </ul>
             </div>
           </div>
         ) : (

@@ -9,49 +9,51 @@ export const Home = () => {
       {/* mobile device hamburger */}
       <div
         onClick={() => setMenyActive(!menyActive)}
-        className='wrapperHamburger'
+        className='wrapperHamburgerHome'
       >
         {menyActive ? (
-          <div className='wrapperDropdown'>
-            <ul className='wrapperHamburgerRoutes'>
-              <li className='hamburgerRoutes'>
-                <Link to='/'>Home</Link>
-              </li>
-              <li className='hamburgerRoutes'>
-                <Link to='/players'>clients</Link>
-              </li>
-              <li className='hamburgerRoutes'>
-                <Link to='/about'>about</Link>
-              </li>
-            </ul>
-            <div className='activeHamburgerIcon'>
+          <div className='test'>
+            <div className='activeHamburgerIconHome'>
               <i class='fas fa-volleyball-ball'></i>{' '}
+            </div>
+            <div className='wrapperDropdownHome'>
+              <ul className='wrapperHamburgerRoutesHome'>
+                <li className='hamburgerRoutesHome'>
+                  <Link to='/'>Home</Link>
+                </li>
+                <li className='hamburgerRoutesHome'>
+                  <Link to='/players'>clients</Link>
+                </li>
+                <li className='hamburgerRoutesHome'>
+                  <Link to='/about'>about</Link>
+                </li>
+              </ul>
             </div>
           </div>
         ) : (
-          <div className='hamburgerIcon'>
+          <div className='hamburgerIconHome'>
             <i class='fas fa-volleyball-ball'></i>{' '}
           </div>
         )}
       </div>
       {/* desktop device navbar  */}
-      <div className='header'>
-        <div className='smallLogoContainer'>
-          <div className='smallLogo'></div>
+      <div className='headerHome'>
+        <div className='smallLogoContainerHome'>
+          <div className='smallLogoHome'></div>
         </div>
-        <div className='nav'>
-          <ul className='wrapperDesktopRoutes'>
-            <li className='desktopRoutes'>
+        <div className='navHome'>
+          <ul className='wrapperDesktopRoutesHome'>
+            <li className='desktopRoutesHome'>
               <Link className='homeLink' to='/'>
                 Home
               </Link>
             </li>
-            <li className='desktopRoutes'>
+            <li className='desktopRoutesHome'>
               <Link className='homeLink' to='/players'>
                 clients
               </Link>
             </li>
-            <li className='desktopRoutesAbout'>
+            <li className='desktopRoutesHomeAbout'>
               <Link className='homeLink' to='/about'>
                 about
               </Link>
@@ -77,12 +79,12 @@ export const Home = () => {
             </a>
           </div>
           <div className='contact'>
-            <a href='https://www.instagram.com/jact.eu/?hl=sv'>
+            <a href='https://www.instagram.com/jact.eu/?hl=sv' target='_blank'>
               <i class='fab fa-instagram icons'></i>
             </a>
           </div>
           <div className='contact'>
-            <a href='https://sv-se.facebook.com/jact.eu/'>
+            <a href='https://sv-se.facebook.com/jact.eu/' target='_blank'>
               <i class='fab fa-facebook icons'></i>
             </a>
           </div>

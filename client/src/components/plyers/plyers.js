@@ -23,27 +23,29 @@ export const Plyers = () => {
       });
   }, []);
   return (
-    <div className='containerClients'>
+    <div className='clientsContainer'>
       {/* mobile device hamburger */}
       <div
         onClick={() => setMenyActive(!menyActive)}
-        className='wrapperHamburger'
+        className='wrapperHamburgerPlayer'
       >
         {menyActive ? (
-          <div className='wrapperDropdown'>
-            <ul className='wrapperHamburgerRoutes'>
-              <li className='hamburgerRoutes'>
-                <Link to='/'>Home</Link>
-              </li>
-              <li className='hamburgerRoutes'>
-                <Link to='/players'>clients</Link>
-              </li>
-              <li className='hamburgerRoutes'>
-                <Link to='/about'>about</Link>
-              </li>
-            </ul>
+          <div className='testPlayers'>
             <div className='activehamburgerIconPlayer'>
               <i class='fas fa-volleyball-ball'></i>{' '}
+            </div>
+            <div className='wrapperDropdownPlayer'>
+              <ul className='wrapperHamburgerRoutesPlayer'>
+                <li className='hamburgerRoutesPlayer'>
+                  <Link to='/'>Home</Link>
+                </li>
+                <li className='hamburgerRoutesPlayer'>
+                  <Link to='/players'>clients</Link>
+                </li>
+                <li className='hamburgerRoutesPlayer'>
+                  <Link to='/about'>about</Link>
+                </li>
+              </ul>
             </div>
           </div>
         ) : (
@@ -74,28 +76,30 @@ export const Plyers = () => {
           </ul>
         </div>
       </div>
-      <div className='wrapperHeaderClients'>
-        <div className='headerClients'>
-          <i class='fas fa-user-edit'></i>Jact Clients
-        </div>
-      </div>
-      {playerList.map((player) => {
-        return (
-          <div className='wrapperPlayer' key={player._id}>
-            <div className='wrapperImg'>
-              <img
-                className='playerImg'
-                src={`${API_URL}/uploads/${player.img}`}
-                alt=''
-              />
-            </div>
-            <div className='wrapperDesc'>
-              <div className='name'>{player.name}</div>
-              <div className='desc'>{player.desc}</div>
-            </div>
+      <div className='wrapperPlayerContainer'>
+        {/* <div className='wrapperHeaderClients'>
+          <div className='headerClients'>
+            <i class='fas fa-user-edit'></i>Jact Clients
           </div>
-        );
-      })}
+        </div> */}
+        {playerList.map((player) => {
+          return (
+            <div className='wrapperPlayer' key={player._id}>
+              <div className='wrapperImg'>
+                <img
+                  className='playerImg'
+                  src={`${API_URL}/uploads/${player.img}`}
+                  alt=''
+                />
+              </div>
+              <div className='wrapperDesc'>
+                <div className='name'>{player.name}</div>
+                <div className='desc'>{player.desc}</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
