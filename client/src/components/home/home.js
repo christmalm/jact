@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import home from './home.css';
+import './home.css';
 
 export const Home = () => {
   const [menyActive, setMenyActive] = useState(false);
@@ -79,12 +79,20 @@ export const Home = () => {
             </a>
           </div>
           <div className='contact'>
-            <a href='https://www.instagram.com/jact.eu/?hl=sv' target='_blank'>
+            <a
+              href='https://www.instagram.com/jact.eu/?hl=sv'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i class='fab fa-instagram icons'></i>
             </a>
           </div>
           <div className='contact'>
-            <a href='https://sv-se.facebook.com/jact.eu/' target='_blank'>
+            <a
+              href='https://sv-se.facebook.com/jact.eu/'
+              target='_blank'
+              rel='noreferrer'
+            >
               <i class='fab fa-facebook icons'></i>
             </a>
           </div>

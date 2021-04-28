@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { API_URL } from '../../../constants/api';
 import axios from 'axios';
-import playerList from './playerList.css';
+import './playerList.css';
 
 export const PlayerList = (props) => {
   const {

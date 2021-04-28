@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import login from './login.css';
+import './login.css';
 import { useForm } from 'react-hook-form';
 import { API_URL } from '../../constants/api';
 import { useHistory } from 'react-router-dom';

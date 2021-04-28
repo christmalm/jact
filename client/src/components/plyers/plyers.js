@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import axios from 'axios';
 import { API_URL } from '../../constants/api';
-import players from './players.css';
+import './players.css';
 
 export const Plyers = () => {
   const [playerList, setPlayerList] = useState([]);

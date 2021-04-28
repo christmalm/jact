@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import about from './about.css';
+import './about.css';
 
 export const About = () => {
   const [menyActive, setMenyActive] = useState(false);

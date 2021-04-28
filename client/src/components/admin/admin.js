@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AddPlyerPopup } from './addPlyerPopup/AddPlyerPopup';
 import { PlayerList } from './playerList/PlayerList';
-import admin from './admin.css';
+import './admin.css';
 
 export const Admin = () => {
   // const [showModal, setShowModal] = useState(false);

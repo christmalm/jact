@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { API_URL } from '../../../constants/api';
-import addPlyerPopup from './addplyerPopup.css';
+import './addplyerPopup.css';
 
 export const AddPlyerPopup = (props) => {
   const { register, handleSubmit } = useForm();
