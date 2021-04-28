@@ -11,6 +11,8 @@ const cors = require('cors');
 
 dotenv.config();
 
+const port = process.env.PORT || 4000;
+
 mongoose.connect(
   process.env.DATABASE_ACCESS,
   { useNewUrlParser: true, useUnifiedTopology: true },
@@ -26,10 +28,4 @@ app.use('/playerList', getPlayer);
 app.use('/deletePlayer/:id', deletePlayer);
 app.use('/signin', signIn);
 
-app.listen(4000, console.log('server  is running on port 4000'));
-
-//https://www.youtube.com/watch?v=SQqSMDIzhaE
-// login
-// tid 1:04:20
-//decrypt password
-// and i can push to repo
+app.listen(console.log(`Server running on ${port}, http://localhost:${port}`));
