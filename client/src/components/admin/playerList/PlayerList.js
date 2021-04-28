@@ -48,7 +48,7 @@ export const PlayerList = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  }, [updatedPlayerList]);
+  }, [setplayersArr, updatedPlayerList]);
 
   return (
     <div className='containerPlayer'>

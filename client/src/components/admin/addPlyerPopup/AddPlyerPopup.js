@@ -6,7 +6,7 @@ import './addplyerPopup.css';
 
 export const AddPlyerPopup = (props) => {
   const { register, handleSubmit } = useForm();
-  const { setShowModal, setUpdatedPlayerList } = props;
+  const { setUpdatedPlayerList } = props;
 
   const onSubmit = (playerData, e) => {
     const playerName = playerData.name;
