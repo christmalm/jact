@@ -28,4 +28,6 @@ app.use('/playerList', getPlayer);
 app.use('/deletePlayer/:id', deletePlayer);
 app.use('/signin', signIn);
 
-app.listen(console.log(`Server running on ${port}, http://localhost:${port}`));
+app.listen(port, () => {
+  console.log(`Server running on ${port}, http://localhost:${port}`);
+});
